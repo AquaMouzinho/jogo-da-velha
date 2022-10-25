@@ -1,0 +1,15 @@
+.formulario__input {
+  background: transparent;
+  border: 1px solid var(--marrom);
+  border-radius: 50px;
+  color: var(--marrom);
+  padding: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.formulario__input::placeholder {
+  color: var(--marrom-claro);
+}

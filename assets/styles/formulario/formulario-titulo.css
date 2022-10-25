@@ -1,0 +1,9 @@
+.formulario__titulo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--marrom);
+  text-transform: uppercase;
+  align-self: center;
+  justify-self: center;
+
+}

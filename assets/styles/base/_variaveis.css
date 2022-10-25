@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+  --bege: #FFF9EA;
+  --preto: #1D1D1D;
+
+  --marrom: #BDAB7B;
+  --marrom-claro: #E1CFA0;
+
+  --vermelho: #EE0101;
+  --laranja: #EE7301;
+  --amarelo: #EEC801;
+  --verde: #3A822E;
+  --azul: #1975B8;
+  --roxo: #B519B8;
+
+  --fonte-titulos: 'Abril Fatface', cursive;
+  --fonte-textos: 'Roboto', sans-serif;
+}

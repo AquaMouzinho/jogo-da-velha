@@ -1,0 +1,11 @@
+.tabuleiro__botao {
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tabuleiro__botao:disabled {
+  color: gray;
+  background-color: antiquewhite;
+  cursor: auto;
+}

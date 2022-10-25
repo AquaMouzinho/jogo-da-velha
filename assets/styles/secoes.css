@@ -1,0 +1,20 @@
+.sec__inicial,
+.sec__jogadores,
+.sec__jogar {
+  background: var(--bege);
+  border: 1px solid var(--preto);
+  border-radius: 1rem;
+  height: 100vh;
+}
+
+.sec__inicial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sec__jogadores {
+  display: grid;
+  grid-template-rows: 10% 90%;
+}

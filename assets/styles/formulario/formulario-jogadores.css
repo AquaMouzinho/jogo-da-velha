@@ -1,0 +1,5 @@
+.formulario__jogadores {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-bottom: 2px solid var(--marrom);
+}

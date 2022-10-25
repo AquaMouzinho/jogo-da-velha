@@ -1,0 +1,5 @@
+.formulario {
+  display: grid;
+  grid-template-rows: 80% 20%;
+  border-top: 2px solid var(--marrom);
+}

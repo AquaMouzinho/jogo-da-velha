@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+
+  <link rel="stylesheet" href="./assets/styles/base/base.css">
+  <link rel="stylesheet" href="./assets/styles/secoes.css">
+  <link rel="stylesheet" href="./assets/styles/botao.css">
+
+  <link rel="stylesheet" href="./assets/styles/formulario/formulario.css">
+  <link rel="stylesheet" href="./assets/styles/formulario/formulario-titulo.css">
+  <link rel="stylesheet" href="./assets/styles/formulario/formulario-jogadores.css">
+  <link rel="stylesheet" href="./assets/styles/formulario/formulario-jogador.css">
+  <link rel="stylesheet" href="./assets/styles/formulario/formulario-input.css">
+  <link rel="stylesheet" href="./assets/styles/formulario/formulario-botao.css">
+
+  <link rel="stylesheet" href="./assets/styles/tabuleiro-botao.css">
+</head>
+<body>
+  <header></header>
+  <main>
+    <section class="sec__inicial">
+      <h1 class="inicial__titulo">Jogo <span>da Velha</span></h1>
+      <button class="botao inicial__botao">Iniciar Jogo</button>
+    </section>
+    <section class="sec__jogadores">
+      <h2 class="formulario__titulo">configurações</h2>
+      <form class="formulario" action="">
+        <div class="formulario__jogadores">
+          <div class="formulario__jogador">
+            <input class="formulario__input" type="text" placeholder="Jogador 1" maxlength="16" data-nome-jog1 required>
+            <select title="forma" name="formaJogador" id="formaJogador" data-forma-jog1>
+              <option value="0">Quadrado</option>
+              <option value="1">Círculo</option>
+              <option value="2">X</option>
+            </select>
+            <input class="form__input--cores" title="cores" type="color" list="presetColors" data-cor-jog1>
+          </div>
+          <div class="formulario__jogador">
+            <input class="formulario__input" type="text" placeholder="Jogador 2" maxlength="16" data-nome-jog2 required>
+            <select title="forma" id="formaJogador2" data-forma-jog2>
+              <option value="0">Quadrado</option>
+              <option value="1">Círculo</option>
+              <option value="2">X</option>
+            </select>
+            <input class="form__input--cores" title="cores" type="color" list="presetColors" data-cor-jog2>
+          </div>
+        </div>
+        <div class="config__partida">
+          <label class="form__input--qtdPartidasLabel"for="qtdPartidas">Quantidade de partidas:</label>
+          <input class="form__input--qtdPartidas" name="qtdPartidas" placeholder="0" type="number" data-qtd-partidas required>
+          <button class="botao formulario__botao" id="btnConfirmarJogo" type="button">Confirmar</button>
+        </div>
+      </form>
+    </section>
+    <section class="sec__jogar">
+      <div class="jogo__pontuacoes">
+        <div class="jogo__jogador">
+          <h3 class="jogo__nome" data-pont-nome1>Jogador 1</h3>
+          <p class="jogo__pontuacao" data-pont-pont1>0</p>
+        </div>
+        <div class="jogo__jogador">
+          <h3 class="jogo__nome" data-pont-nome2>Jogador 2</h3>
+          <p class="jogo__pontuacao" data-pont-pont2>0</p>
+        </div>
+      </div>
+      <h2 class="jogo__titulo" id="resultadoJogo">RESULTADO</h2>
+      <div class="tabuleiro">
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+        <canvas class="tabuleiro__celula"></canvas>
+      </div>
+      <button id="btnReset" class="tabuleiro__botao" type="button">Nova Partida</button>
+    </section>
+  </main>
+  <footer></footer>
+
+  <script type="module" src="assets/scripts/main.js"></script>
+</body>
+</html>
