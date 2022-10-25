@@ -1,5 +1,7 @@
 .formulario__botao {
-  color: var(--bege);
   background: var(--marrom);
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 40px 40px;
+  color: var(--bege);
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
 }

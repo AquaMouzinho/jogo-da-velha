@@ -1,0 +1,15 @@
+.tabuleiro__celula {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-right: 0.25rem solid;
+  border-bottom: 0.25rem solid;
+}
+
+.tabuleiro__celula:nth-child(3n) {
+  border-right: none;
+}
+
+.tabuleiro__celula:nth-child(1n + 7) {
+  border-bottom: none;
+}

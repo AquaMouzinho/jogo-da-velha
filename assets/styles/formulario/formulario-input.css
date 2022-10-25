@@ -8,8 +8,37 @@
   text-align: center;
   text-transform: uppercase;
   outline: none;
+  width: 70%;
 }
 
 .formulario__input::placeholder {
   color: var(--marrom-claro);
+}
+
+.form__input--qtdPartidas {
+  background: transparent;
+  color: var(--marrom);
+  font-weight: 500;
+  border-bottom: 1px solid var(--marrom-claro);
+  width: 20%;
+  text-align: center;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__input--qtdPartidas:focus {
+  border-bottom: 2px solid var(--marrom);
+}
+
+.form__input--qtdPartidas::placeholder {
+  color: var(--marrom-claro);
+}
+
+.form__input--qtdPartidasLabel {
+  font-family: var(--fonte-textos);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--marrom);
+  margin: 1rem 0 0.5rem 0;
 }

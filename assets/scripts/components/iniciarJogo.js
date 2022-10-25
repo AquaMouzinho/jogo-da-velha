@@ -1,7 +1,10 @@
-import { Jogo } from "../jogo.js";
-
 export function iniciarJogo(dadosJogo) {
   let vezJogador = 0;
+
+  const nomeJogadorUm = document.querySelector('[data-pont-nome1]');
+  nomeJogadorUm.innerText = dadosJogo.jogadores[0].nome;
+  const nomeJogadorDois = document.querySelector('[data-pont-nome2]');
+  nomeJogadorDois.innerText = dadosJogo.jogadores[1].nome;
 
   const canvases = document.querySelectorAll('canvas');
   canvases.forEach(canva => {
@@ -37,15 +40,16 @@ export function iniciarJogo(dadosJogo) {
       }
       canva.classList.add('disabled');
 
+      console.log('dados antes de verificar o tabuleiro: ', dadosJogo);
       verificaTabuleiro(dadosJogo, dadosJogo.tabuleiro);
     });
   });
 
-
   const botaoReset = document.getElementById('btnReset');
   botaoReset.addEventListener('click', () => {
     const canvas = document.querySelectorAll('canvas');
-    const linhaResultado = document.getElementById('resultadoJogo');
+    const linhaResultado = document.querySelector('[data-resultado]');
+    linhaResultado.style.visibility = 'hidden';
 
     canvas.forEach(canva => {
       if (canva.classList.contains('disabled')) {
@@ -63,22 +67,28 @@ export function iniciarJogo(dadosJogo) {
   });
 }
 
-function fimDeJogo(algmGanhou, nome = 'E', dadosJogo) {
-  const linhaResultado = document.getElementById('resultadoJogo');
+function fimDeJogo(algmGanhou, nome, dadosJogo) {
+  const linhaResultado = document.querySelector('[data-resultado]');
   const botaoReset = document.getElementById('btnReset');
+  const ptsJogadorUm = document.querySelector('[data-pont-pont1]');
+  const ptsJogadorDois = document.querySelector('[data-pont-pont2]');
 
+  console.log(dadosJogo);
   if (algmGanhou) {
     if (nome === 'X') {
-      console.log(dadosJogo.jogadores, dadosJogo.jogadores[0])
       dadosJogo.jogadores[0].aumentarPontuacao();
+      ptsJogadorUm.innerHTML = dadosJogo.jogadores[0]._pontuacao;
       linhaResultado.innerText = `${dadosJogo.jogadores[0].nome} ganhou essa partida!`;
     } else {
-      console.log(dadosJogo.jogadores, dadosJogo.jogadores[1])
       dadosJogo.jogadores[1].aumentarPontuacao();
+      ptsJogadorDois.innerHTML = dadosJogo.jogadores[1]._pontuacao;
+      console.log(dadosJogo.jogadores);
       linhaResultado.innerText = `${dadosJogo.jogadores[1].nome} ganhou essa partida!`;
     }
+    linhaResultado.style.visibility = 'visible';
   } else {
     linhaResultado.innerHTML = 'Partida empatada!'
+    linhaResultado.style.visibility = 'visible';
   }
 
   const canvases = document.querySelectorAll('canvas');
@@ -132,10 +142,10 @@ function verificaTabuleiro(dadosJogo, arrGrid) {
 
   //VERIFICA SE GANHOU NAS DIAGONAIS
   if (arrGrid[0] != undefined && arrGrid[0] == arrGrid[4] && arrGrid[0] == arrGrid[8]) {
-    fimDeJogo(true, arrGrid[0]);
+    fimDeJogo(true, arrGrid[0], dadosJogo);
     return;
   } else if (arrGrid[2] != undefined && arrGrid[2] == arrGrid[4] && arrGrid[2] == arrGrid[6]) {
-    fimDeJogo(true, arrGrid[2]);
+    fimDeJogo(true, arrGrid[2], dadosJogo);
     return;
   }
 }

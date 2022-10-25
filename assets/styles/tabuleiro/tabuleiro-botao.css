@@ -1,0 +1,14 @@
+.tabuleiro__botao {
+  background-color: var(--marrom);
+  border-radius: 0 0 40px 40px;
+  color: var(--bege);
+  cursor: pointer;
+  font-family: var(--fonte-textos);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.tabuleiro__botao:disabled {
+  background-color: var(--marrom-claro);
+  cursor: auto;
+}

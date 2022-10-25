@@ -1,0 +1,28 @@
+.jogo__jogador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jogo__jogador--nome {
+  color: var(--marrom);
+  font-family: var(--fonte-titulos);
+  font-size: 1.3rem;
+}
+
+.jogo__jogador--pontuacao {
+  color: var(--marrom-claro);
+  font-family: var(--fonte-textos);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.jogo__jogador:first-child {
+  grid-area: jogador1;
+}
+
+.jogo__jogador:last-child {
+  grid-area: jogador2;
+}

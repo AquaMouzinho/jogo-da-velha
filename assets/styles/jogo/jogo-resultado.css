@@ -1,0 +1,8 @@
+.jogo__resultado {
+  color: var(--marrom-claro);
+  font-family: var(--fonte-titulos);
+  word-break: break-all;
+  grid-area: resultado;
+  margin-top: 0.5rem;
+  visibility: hidden;
+}

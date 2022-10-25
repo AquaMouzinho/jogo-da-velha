@@ -1,0 +1,8 @@
+.inicial__subtitulo {
+  color: var(--marrom);
+  font-family: var(--fonte-textos);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}

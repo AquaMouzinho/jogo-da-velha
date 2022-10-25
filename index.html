@@ -10,28 +10,44 @@
   <link rel="stylesheet" href="./assets/styles/secoes.css">
   <link rel="stylesheet" href="./assets/styles/botao.css">
 
+  <link rel="stylesheet" href="./assets/styles/telaInicial/inicial-titulo.css">
+  <link rel="stylesheet" href="./assets/styles/telaInicial/inicial-subtitulo.css">
+  <link rel="stylesheet" href="./assets/styles/telaInicial/inicial-botao.css">
+
   <link rel="stylesheet" href="./assets/styles/formulario/formulario.css">
   <link rel="stylesheet" href="./assets/styles/formulario/formulario-titulo.css">
   <link rel="stylesheet" href="./assets/styles/formulario/formulario-jogadores.css">
   <link rel="stylesheet" href="./assets/styles/formulario/formulario-jogador.css">
   <link rel="stylesheet" href="./assets/styles/formulario/formulario-input.css">
   <link rel="stylesheet" href="./assets/styles/formulario/formulario-botao.css">
+  <link rel="stylesheet" href="./assets/styles/config-partida.css">
 
-  <link rel="stylesheet" href="./assets/styles/tabuleiro-botao.css">
+  <link rel="stylesheet" href="./assets/styles/tabuleiro/tabuleiro.css">
+  <link rel="stylesheet" href="./assets/styles/tabuleiro/tabuleiro-celula.css">
+  <link rel="stylesheet" href="./assets/styles/tabuleiro/tabuleiro-botao.css">
+
+  <link rel="stylesheet" href="./assets/styles/jogo/jogo-pontuacoes.css">
+  <link rel="stylesheet" href="./assets/styles/jogo/jogo-jogador.css">
+  <link rel="stylesheet" href="./assets/styles/jogo/jogo-resultado.css">
 </head>
 <body>
   <header></header>
   <main>
     <section class="sec__inicial">
-      <h1 class="inicial__titulo">Jogo <span>da Velha</span></h1>
-      <button class="botao inicial__botao">Iniciar Jogo</button>
+      <div class="inicial__titulo--grid">
+        <h1 class="inicial__titulo">Jogo</h1>
+        <h2 class="inicial__titulo--da">da</h2>
+        <h2 class="inicial__titulo--velha">Velha</h2>
+      </div>
+      <p class="inicial__subtitulo">clássico e casual na medida certa.</p>
+      <button id="btnIniciarJogo" class="botao inicial__botao">Iniciar Jogo</button>
     </section>
     <section class="sec__jogadores">
       <h2 class="formulario__titulo">configurações</h2>
       <form class="formulario" action="">
         <div class="formulario__jogadores">
           <div class="formulario__jogador">
-            <input class="formulario__input" type="text" placeholder="Jogador 1" maxlength="16" data-nome-jog1 required>
+            <input class="formulario__input" type="text" placeholder="Jogador 1" maxlength="10" data-nome-jog1 required>
             <select title="forma" name="formaJogador" id="formaJogador" data-forma-jog1>
               <option value="0">Quadrado</option>
               <option value="1">Círculo</option>
@@ -59,15 +75,16 @@
     <section class="sec__jogar">
       <div class="jogo__pontuacoes">
         <div class="jogo__jogador">
-          <h3 class="jogo__nome" data-pont-nome1>Jogador 1</h3>
-          <p class="jogo__pontuacao" data-pont-pont1>0</p>
+          <h3 class="jogo__jogador--nome" data-pont-nome1>Jogador 1</h3>
+          <p class="jogo__jogador--pontuacao" data-pont-pont1>0</p>
         </div>
+        <p class="jogo__pontuacoes--vs">VS</p>
         <div class="jogo__jogador">
-          <h3 class="jogo__nome" data-pont-nome2>Jogador 2</h3>
-          <p class="jogo__pontuacao" data-pont-pont2>0</p>
+          <h3 class="jogo__jogador--nome" data-pont-nome2>Jogador 2</h3>
+          <p class="jogo__jogador--pontuacao" data-pont-pont2>0</p>
         </div>
+        <h2 class="jogo__resultado" data-resultado>RESULTADO</h2>
       </div>
-      <h2 class="jogo__titulo" id="resultadoJogo">RESULTADO</h2>
       <div class="tabuleiro">
         <canvas class="tabuleiro__celula"></canvas>
         <canvas class="tabuleiro__celula"></canvas>
@@ -79,7 +96,7 @@
         <canvas class="tabuleiro__celula"></canvas>
         <canvas class="tabuleiro__celula"></canvas>
       </div>
-      <button id="btnReset" class="tabuleiro__botao" type="button">Nova Partida</button>
+      <button id="btnReset" class="tabuleiro__botao" type="button">Outra Partida</button>
     </section>
   </main>
   <footer></footer>

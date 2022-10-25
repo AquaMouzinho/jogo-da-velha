@@ -1,0 +1,19 @@
+.jogo__pontuacoes {
+  display: grid;
+  grid-template-areas:
+    'jogador1 vs jogador2'
+    'resultado resultado resultado';
+  grid-template-rows: 80% 20%;
+  padding: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.jogo__pontuacoes--vs {
+  align-self: center;
+  color: var(--marrom);
+  font-family: var(--fonte-titulos);
+  font-size: 1.7rem;
+  font-weight: 600;
+  grid-area: vs;
+}

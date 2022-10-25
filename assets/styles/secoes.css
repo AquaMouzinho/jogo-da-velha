@@ -2,8 +2,8 @@
 .sec__jogadores,
 .sec__jogar {
   background: var(--bege);
-  border: 1px solid var(--preto);
-  border-radius: 1rem;
+  border: 2px solid var(--preto);
+  border-radius: 50px;
   height: 100vh;
 }
 
@@ -15,6 +15,15 @@
 }
 
 .sec__jogadores {
-  display: grid;
   grid-template-rows: 10% 90%;
+}
+
+.sec__jogar {
+  grid-template-rows: 20% 70% 10%;
+}
+
+.sec__jogadores,
+.sec__jogar {
+  display: none;
+  visibility: hidden;
 }

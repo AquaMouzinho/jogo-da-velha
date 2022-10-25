@@ -1,0 +1,28 @@
+.inicial__titulo {
+  font-family: var(--fonte-titulos);
+  font-size: 4rem;
+  color: var(--verde);
+  grid-area: titulo;
+}
+
+.inicial__titulo--grid {
+  display: grid;
+  grid-template-rows: 40% 60%;
+  grid-template-areas: 'titulo da' 'titulo velha';
+}
+
+.inicial__titulo--da,
+.inicial__titulo--velha {
+  font-family: var(--fonte-titulos);
+  color: var(--laranja);
+}
+
+.inicial__titulo--da {
+  font-size: 1.7rem;
+  grid-area: da;
+}
+
+.inicial__titulo--velha {
+  font-size: 2.5rem;
+  grid-area: velha;
+}
